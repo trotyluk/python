@@ -12,6 +12,7 @@ import socket
 import pathlib
 
 def check_os():
+    """Function check OS."""
     my_system = platform.uname()
     system = my_system.system
     node = my_system.node
@@ -20,20 +21,10 @@ def check_os():
     machine = my_system.machine
     processor = my_system.processor
     config = [system,node,release,version,machine,processor]
-    return config   
-#TODO - system check
-#TODO - 7z check
-#TODO - check if port is open
-#TODO - create archive
-#TODO - send archive
-#TODO - make log
-#TODO - remove archives
-#TODO - check archive
-#TODO - create archive
-#TODO - send archive
-#TODO - make log
-
+    return config
 
 #NOTE - Program Start
 #NOTE - check system
 print(check_os())
+#NOTE - check 7z
+

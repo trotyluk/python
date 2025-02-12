@@ -36,7 +36,7 @@ def check7z(osid):
     return path7z
 
 # check if port is open to connect by ssh
-def check_port(ip,port):
+
 def check_port(ip, port):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -50,7 +50,6 @@ def check_port(ip, port):
     return result
 
 #//TODO create send archive
-def send_archive(archive_name,ip_address,port):
 def send_archive(archive_name, ip_address, port):
     # chec if can be sent
     print(f"Sending archive {archive_name} to {ip_address} on port {port}")
@@ -214,6 +213,7 @@ port=zport
 port = zport
 ip = "185.20.54.8"
 if check_port(ip, port):
+    print(f"Port {port} is open on {ip}")
 else:
     print(f"Port {port} is closed on {ip}")
 
