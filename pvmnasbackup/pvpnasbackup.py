@@ -22,9 +22,14 @@ def check_os():
     processor = my_system.processor
     config = [system,node,release,version,machine,processor]
     return config
-
+def create_archve(archname):
+    #pvmlist= fnmatch.filter(os.listdir('.'), '*pvm')
+    create7z='7z a "'+ archname +'.7z" "'+ archname + '"'
+    # print(f'Creating {archname}.7z')
+    os.system(create7z)
 #NOTE - Program Start
 #NOTE - check system
-print(check_os())
+osreport=check_os()
+systype=osreport[0]
+print(systype)
 #NOTE - check 7z
-
