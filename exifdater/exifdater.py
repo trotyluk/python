@@ -11,11 +11,15 @@ print("testExifDater 0.01")
 # display information onscreen
 import importlib.util
 
+
+
+
+
 def is_library_installed(library_name):
     return importlib.util.find_spec(library_name) is not None
 
 # Example usage
-library_name = 'numpy'
+library_name = 'Pillow'
 if is_library_installed(library_name):
    print(f"{library_name} is installed.")
 else:
