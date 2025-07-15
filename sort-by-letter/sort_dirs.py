@@ -7,10 +7,10 @@ def move_folder(src,path1):
     f_letter = src[0].upper()
     new_folder = os.path.join(path1, f_letter)
     print(f_letter, new_folder)
-    # if not os.path.exists(new_folder):
-    #     os.makedirs(new_folder)
-    # new_path = os.path.join(new_folder, src)
-    # os.rename(os.path.join(path1, src), new_path)
+    if not os.path.exists(new_folder):
+        os.makedirs(new_folder)
+    new_path = os.path.join(new_folder, src)
+    os.rename(os.path.join(path1, src), new_path)
     
     
 def sort_directories(path):   
