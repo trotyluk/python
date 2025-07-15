@@ -1,7 +1,19 @@
 #!python3
 import os
 import sys
-def sort_directories(path):
+def move_folder(src):
+    # This function is a placeholder for moving folders to new folder named by First letter.
+    print(src)
+    f_letter = src[0].upper()
+    new_folder = os.path.join(os.getcwd(), f_letter)
+    print(f_letter, new_folder)
+    # if not os.path.exists(new_folder):
+    #     os.makedirs(new_folder)
+    # new_path = os.path.join(new_folder, src)
+    # os.rename(os.path.join(os.getcwd(), src), new_path)
+    
+    
+def sort_directories(path):   
     try:
         # List all directories in the given path
         dirs = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
@@ -11,7 +23,7 @@ def sort_directories(path):
         
         # Print sorted directories
         for d in sorted_dirs:
-            print(d)
+            move_folder(d)
     except Exception as e:
         print(f"An error occurred: {e}", file=sys.stderr)
 
